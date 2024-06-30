@@ -1,0 +1,123 @@
+.bold-row .table-cell {
+    font-weight: bold;
+}
+
+.checked-row .table-cell {
+    background-color: #e0f7fa; /* Subtle background color for checked rows */
+}
+
+.table-header-cell, .table-cell {
+    border-right: 1px solid rgba(224, 224, 224, 1);
+    color: #333;
+    padding: 4px; /* Adjust padding to reduce whitespace */
+    font-size: 0.8em; /* Scale down font size */
+}
+
+.table-header-cell:last-child, .table-cell:last-child {
+    border-right: none; /* Remove right border for the last cell */
+}
+
+.table-header-cell {
+    background-color: #e56695;
+    color: #333;
+    font-weight: bold;
+}
+
+.small-cell {
+    width: 20px; /* Reduce width for smaller cells */
+}
+
+.fit-content-cell {
+    white-space: nowrap;
+    width: 1%; /* Fit the content width */
+    text-align: center; /* Center align the content */
+}
+
+.checkbox-cell {
+    width: 40px; /* Smaller width for checkbox column */
+    text-align: center; /* Center align the checkbox */
+}
+
+.info-box {
+    text-align: center;
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    width: 100%;
+    height: fit-content;
+}
+
+.sleek-box {
+    background-color: rgba(0, 0, 0, 0.05); /* Subtle background */
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sleek-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Match the height of the table */
+    color: #ffffff;
+    width: 100%; /* Ensure it takes the full width of the parent container */
+}
+
+.custom-progress-bar {
+    height: 100%; /* Use height of the parent container */
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure it takes the full width of the parent container */
+}
+
+.progress-bar-fill {
+    width: 100%;
+    background: linear-gradient(to top, #538392, #6295A2, #80B9AD, #B3E2A7, #EBF4F6);
+    transition: height 0.3s ease-in-out;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.progress-percentage {
+    margin-top: 10px;
+    font-size: 2rem; /* Adjusted font size */
+    font-weight: bolder;
+    color: #000000;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px 0 0 8px; /* Remove the right rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.wrap-cell {
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 150px;
+}
+.body1{
+    color: aliceblue;
+}
+.h5{
+    color: aliceblue;
+}

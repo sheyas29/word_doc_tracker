@@ -1,0 +1,22 @@
+.table-header-row, .table-row, .MuiTableHead-root {
+    display: flex;
+    width: 100%;
+}
+
+.table-header-cell, .table-cell {
+    padding: 16px;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    flex: 1;
+    font-size: 1.2em; /* Increased font size for better readability */
+    box-sizing: border-box;
+    min-width: 100px; /* Ensure a minimum width for each cell */
+}
+
+.table-header-cell {
+    font-weight: bold;
+    background-color: #f0f0f0; /* Header background color */
+}
+
+.bold-row .table-cell {
+    font-weight: bold;
+}
