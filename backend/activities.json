@@ -5,17 +5,21 @@
         "mins": "00",
         "sec": "00",
         "si.no": "1",
-        "activity_name": "Be yourself; everyone else is already taken.",
-        "confirmed_by": "Oscar Wilde"
+        "activity_name": "xy",
+        "confirmed_by": "",
+        "is_bold": true,
+        "is_checked": false
     },
     {
         "id": 2,
         "hrs": "",
         "mins": "",
         "sec": "",
-        "si.no": "",
-        "activity_name": "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me",
-        "confirmed_by": "Marilyn Monroe"
+        "si.no": "1.1",
+        "activity_name": "xyz",
+        "confirmed_by": "xyz",
+        "is_bold": false,
+        "is_checked": true
     },
     {
         "id": 3,
@@ -23,8 +27,10 @@
         "mins": "",
         "sec": "",
         "si.no": "1.2",
-        "activity_name": "So many books, so little time.",
-        "confirmed_by": "Frank Zappa"
+        "activity_name": "xyz",
+        "confirmed_by": "xyz",
+        "is_bold": false,
+        "is_checked": true
     },
     {
         "id": 4,
@@ -32,8 +38,10 @@
         "mins": "00",
         "sec": "0:5",
         "si.no": "2",
-        "activity_name": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe",
-        "confirmed_by": "Albert Einstein"
+        "activity_name": "ABC",
+        "confirmed_by": "",
+        "is_bold": true,
+        "is_checked": false
     },
     {
         "id": 5,
@@ -41,8 +49,10 @@
         "mins": "",
         "sec": "",
         "si.no": "2.1",
-        "activity_name": "A room without books is like a body without a soul.",
-        "confirmed_by": "Marcus Tullius Cicero"
+        "activity_name": "ABC",
+        "confirmed_by": "ABC",
+        "is_bold": false,
+        "is_checked": true
     },
     {
         "id": 6,
@@ -50,8 +60,10 @@
         "mins": "50",
         "sec": "05",
         "si.no": "3",
-        "activity_name": "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
-        "confirmed_by": "Bernard M. Baruch"
+        "activity_name": "xyz",
+        "confirmed_by": "xyz",
+        "is_bold": false,
+        "is_checked": true
     },
     {
         "id": 7,
@@ -59,8 +71,10 @@
         "mins": "",
         "sec": "",
         "si.no": "3.1",
-        "activity_name": "You've gotta dance like there's no",
-        "confirmed_by": "William W. Purkey"
+        "activity_name": "xyz",
+        "confirmed_by": "xyz",
+        "is_bold": false,
+        "is_checked": true
     },
     {
         "id": 8,
@@ -68,8 +82,10 @@
         "mins": "",
         "sec": "",
         "si.no": "3.2",
-        "activity_name": "Be the change that you wish to see in the world",
-        "confirmed_by": "Mahatma Gandhi"
+        "activity_name": "xyz",
+        "confirmed_by": "xyz",
+        "is_bold": false,
+        "is_checked": true
     },
     {
         "id": 9,
@@ -77,61 +93,20 @@
         "mins": "",
         "sec": "",
         "si.no": "4",
-        "activity_name": "In three words I can sum up everything I've learned about life: it goes on.",
-        "confirmed_by": "Robert Frost"
+        "activity_name": "ABC",
+        "confirmed_by": "ABC",
+        "is_bold": true,
+        "is_checked": true
     },
     {
-        "id": 11,
+        "id": 10,
         "hrs": "-3",
         "mins": "34",
         "sec": "35",
         "si.no": "5",
         "activity_name": "xcad",
-        "confirmed_by": ""
-    },
-    {
-        "id": 12,
-        "hrs": "-3",
-        "mins": "34",
-        "sec": "35",
-        "si.no": "5",
-        "activity_name": "xcad",
-        "confirmed_by": ""
-    },
-    {
-        "id": 13,
-        "hrs": "-3",
-        "mins": "34",
-        "sec": "35",
-        "si.no": "5",
-        "activity_name": "xcad",
-        "confirmed_by": ""
-    },
-    {
-        "id": 14,
-        "hrs": "-3",
-        "mins": "34",
-        "sec": "35",
-        "si.no": "5",
-        "activity_name": "xcad",
-        "confirmed_by": ""
-    },
-    {
-        "id": 15,
-        "hrs": "-3",
-        "mins": "34",
-        "sec": "35",
-        "si.no": "5",
-        "activity_name": "xcad",
-        "confirmed_by": ""
-    },
-    {
-        "id": 16,
-        "hrs": "-3",
-        "mins": "34",
-        "sec": "35",
-        "si.no": "5",
-        "activity_name": "xcad",
-        "confirmed_by": ""
+        "confirmed_by": "",
+        "is_bold": true,
+        "is_checked": false
     }
 ]

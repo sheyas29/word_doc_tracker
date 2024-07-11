@@ -3,12 +3,12 @@
 }
 
 .checked-row .table-cell {
-    background-color: #e0f7fa; /* Subtle background color for checked rows */
+    background-color: rgb(255, 237, 216); /* Subtle background color for checked rows */
 }
 
 .table-header-cell, .table-cell {
     border-right: 1px solid rgba(224, 224, 224, 1);
-    color: #333;
+    color: #2B2D42;
     padding: 4px; /* Adjust padding to reduce whitespace */
     font-size: 0.8em; /* Scale down font size */
 }
@@ -18,8 +18,8 @@
 }
 
 .table-header-cell {
-    background-color: #e56695;
-    color: #333;
+    background-color: #8D99AE;
+    color: #2B2D42;
     font-weight: bold;
 }
 
@@ -41,7 +41,7 @@
 .info-box {
     text-align: center;
     padding: 0.5em;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 237, 216, 0.8);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
@@ -66,13 +66,13 @@
     flex-direction: column;
     align-items: center;
     height: 100%; /* Match the height of the table */
-    color: #ffffff;
+    color: #2B2D42;
     width: 100%; /* Ensure it takes the full width of the parent container */
 }
 
 .custom-progress-bar {
     height: 100%; /* Use height of the parent container */
-    background-color: #e0e0e0;
+    background: linear-gradient(180deg, #EDF2F4, #2B2D42);
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -82,7 +82,7 @@
 
 .progress-bar-fill {
     width: 100%;
-    background: linear-gradient(to top, #538392, #6295A2, #80B9AD, #B3E2A7, #EBF4F6);
+    background: linear-gradient(180deg, #D80032, #2B2D42);
     transition: height 0.3s ease-in-out;
     border-radius: 10px 10px 0 0;
     position: absolute;
@@ -93,14 +93,14 @@
     margin-top: 10px;
     font-size: 2rem; /* Adjusted font size */
     font-weight: bolder;
-    color: #000000;
+    color: #2B2D42;
 }
 
 .sticky-header {
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 237, 216, 0.8);
     padding: 8px;
     margin-bottom: 8px;
     border-radius: 8px 0 0 8px; /* Remove the right rounded corners */
@@ -115,9 +115,8 @@
     word-wrap: break-word;
     max-width: 150px;
 }
-.body1{
-    color: aliceblue;
-}
-.h5{
-    color: aliceblue;
+
+body {
+    background: linear-gradient(180deg, #EDF2F4, #2B2D42);
+    color: #2B2D42;
 }

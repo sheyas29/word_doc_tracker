@@ -8,13 +8,24 @@ const TableSelection = () => {
     const [data, setData] = useState([]);
     const [boldRows, setBoldRows] = useState([]);
     const [checkboxRows, setCheckboxRows] = useState([]);
+    const [initialBoldRows, setInitialBoldRows] = useState([]);
+    const [initialCheckboxRows, setInitialCheckboxRows] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:3001/activities');
-                setData(response.data);
+                const fetchedData = response.data;
+
+                const boldRowsFromData = fetchedData.filter(row => row.is_bold).map(row => row.id);
+                const checkboxRowsFromData = fetchedData.filter(row => row['si.no'].includes('.') || row.confirmed_by).map(row => row.id);
+
+                setData(fetchedData);
+                setBoldRows(boldRowsFromData);
+                setCheckboxRows(checkboxRowsFromData);
+                setInitialBoldRows(boldRowsFromData);
+                setInitialCheckboxRows(checkboxRowsFromData);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -30,6 +41,15 @@ const TableSelection = () => {
         setCheckboxRows(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
     };
 
+    const handleCheckAll = () => {
+        setCheckboxRows(data.map(row => row.id));
+    };
+
+    const handleReset = () => {
+        setBoldRows(initialBoldRows);
+        setCheckboxRows(initialCheckboxRows);
+    };
+
     const handleSubmit = () => {
         localStorage.setItem('boldRows', JSON.stringify(boldRows));
         localStorage.setItem('checkboxRows', JSON.stringify(checkboxRows));
@@ -37,7 +57,7 @@ const TableSelection = () => {
     };
 
     return (
-        <Box sx={{ padding: 2 }}>
+        <Box sx={{ padding: 2, backgroundColor: '#EDF2F4', minHeight: '100vh' }}>
             <TableContainer component={Paper} sx={{ height: 600, width: '100%', marginBottom: 2 }}>
                 <Table stickyHeader sx={{ minWidth: 800 }}>
                     <TableHead>
@@ -78,9 +98,17 @@ const TableSelection = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <Button variant="contained" color="primary" onClick={handleSubmit} style={{ margin: '20px auto', display: 'block' }}>
-                Proceed
-            </Button>
+            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
+                <Button variant="contained" onClick={handleCheckAll} sx={{ backgroundColor: '#8D99AE', color: '#EDF2F4' }}>
+                    Check All
+                </Button>
+                <Button variant="contained" onClick={handleReset} sx={{ backgroundColor: '#D80032', color: '#EDF2F4' }}>
+                    Reset
+                </Button>
+                <Button variant="contained" onClick={handleSubmit} sx={{ backgroundColor: '#2B2D42', color: '#EDF2F4' }}>
+                    Proceed
+                </Button>
+            </Box>
         </Box>
     );
 };

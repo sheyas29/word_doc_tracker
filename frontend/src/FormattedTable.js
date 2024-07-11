@@ -112,7 +112,7 @@ const FormattedTable = () => {
     };
 
     return (
-        <Box sx={{ padding: 2, background: 'linear-gradient(to right, #EBF4F6, #37B7C3, #088395, #071952)', minHeight: '100vh', color: '#333', display: 'flex' }}>
+        <Box sx={{ padding: 2, background: 'linear-gradient(180deg, #EDF2F4, #2B2D42)', minHeight: '100vh', color: '#333', display: 'flex' }}>
             <Box sx={{ width: '80%', display: 'flex', flexDirection: 'column' }}>
                 <Box className="header-container" sx={{ width: '100%', marginBottom: '16px' }}>
                     <Typography variant="h5" style={{ textAlign: 'center', paddingBottom: '10px', paddingTop: '5px' }}>Activity Tracker</Typography>
@@ -171,7 +171,7 @@ const FormattedTable = () => {
                     variant="contained" 
                     color="secondary" 
                     onClick={handleReset} 
-                    sx={{ marginTop: 2, alignSelf: 'center' }}
+                    sx={{ marginTop: 2, alignSelf: 'center', backgroundColor: '#D80032', color: '#EDF2F4' }}
                 >
                     {confirmReset === 1 ? "Are you sure you want to reset?" : 
                     confirmReset === 2 ? "Are you really sure you want to reset?" : 
@@ -179,12 +179,12 @@ const FormattedTable = () => {
                 </Button>
             </Box>
             <Box sx={{ width: '15%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Box className="info-box" sx={{ marginBottom: 1, width: '100%', height: '100px',right:'-30px',position:'relative',top:'47px'}}>
+                <Box className="info-box" sx={{ marginBottom: 1, width: '100%', height: '100px', right: '-30px', position: 'relative', top: '47px', backgroundColor: 'rgba(255, 237, 216, 0.8)' }}>
                     <Typography variant="h6">Progress</Typography>
                     <Typography className="progress-percentage">{`${Math.round(progressPercentage)}%`}</Typography>
                 </Box>
                 <Box className="progress-container" sx={{ flexGrow: 1, justifyContent: 'center', width: '100%', height: '100%' }}>
-                    <div className="custom-progress-bar" style={{ height: '85%', width: '100%',right:'-30px' }}>
+                    <div className="custom-progress-bar" style={{ height: '85%', width: '100%', right: '-30px' }}>
                         <div className="progress-bar-fill" style={{ height: `${progressPercentage}%`, width: '100%' }}></div>
                     </div>
                 </Box>
