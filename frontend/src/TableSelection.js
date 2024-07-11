@@ -99,13 +99,13 @@ const TableSelection = () => {
                 </Table>
             </TableContainer>
             <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
-                <Button variant="contained" onClick={handleCheckAll} sx={{ backgroundColor: '#8D99AE', color: '#EDF2F4' }}>
+                <Button variant="contained" color="primary" onClick={handleCheckAll} sx={{ backgroundColor: '#8D99AE', color: '#EDF2F4' }}>
                     Check All
                 </Button>
-                <Button variant="contained" onClick={handleReset} sx={{ backgroundColor: '#D80032', color: '#EDF2F4' }}>
+                <Button variant="contained" color="secondary" onClick={handleReset} sx={{ backgroundColor: '#D80032', color: '#EDF2F4' }}>
                     Reset
                 </Button>
-                <Button variant="contained" onClick={handleSubmit} sx={{ backgroundColor: '#2B2D42', color: '#EDF2F4' }}>
+                <Button variant="contained" color="success" onClick={handleSubmit} sx={{ backgroundColor: '#2B2D42', color: '#EDF2F4' }}>
                     Proceed
                 </Button>
             </Box>

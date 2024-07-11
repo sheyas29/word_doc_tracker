@@ -58,8 +58,14 @@ const FormattedTable = () => {
     const handleReset = () => {
         if (confirmReset === 0) {
             setConfirmReset(1);
+            setTimeout(() => {
+                setConfirmReset(0); // Reset back to initial state if not confirmed immediately
+            }, 5000); // Adjust the timeout duration as needed
         } else if (confirmReset === 1) {
             setConfirmReset(2);
+            setTimeout(() => {
+                setConfirmReset(0); // Reset back to initial state if not confirmed immediately
+            }, 5000); // Adjust the timeout duration as needed
         } else if (confirmReset === 2) {
             setCheckedRows([]);
             setConfirmReset(0);
@@ -93,7 +99,7 @@ const FormattedTable = () => {
         const isChecked = checkedRows.includes(row.id);
         return (
             <TableRow key={row.id} className={`${isBold ? 'bold-row' : ''} ${isChecked ? 'checked-row' : ''}`}>
-                <TableCell className="table-cell"style={{width:'fit-content'}}>{row.hrs}</TableCell>
+                <TableCell className="table-cell" style={{ width: 'fit-content' }}>{row.hrs}</TableCell>
                 <TableCell className="table-cell">{row.mins}</TableCell>
                 <TableCell className="table-cell">{row.sec}</TableCell>
                 <TableCell className="table-cell">{row['si.no']}</TableCell>
@@ -101,8 +107,8 @@ const FormattedTable = () => {
                 <TableCell className="table-cell fit-content-cell">{row.confirmed_by}</TableCell>
                 <TableCell className="table-cell checkbox-cell">
                     {checkboxRows.includes(row.id) && (
-                        <Checkbox 
-                            checked={checkedRows.includes(row.id)} 
+                        <Checkbox
+                            checked={checkedRows.includes(row.id)}
                             onChange={() => handleCheckboxClick(row.id)}
                         />
                     )}
@@ -112,7 +118,7 @@ const FormattedTable = () => {
     };
 
     return (
-        <Box sx={{ padding: 2, background: 'linear-gradient(180deg, #EDF2F4, #2B2D42)', minHeight: '100vh', color: '#333', display: 'flex' }}>
+        <Box sx={{ padding: 2, background: 'linear-gradient(to right, #EDF2F4, #8D99AE, #2B2D42, #2B2D42)', minHeight: '100vh', color: '#333', display: 'flex', backgroundImage: 'url(https://www.transparenttextures.com/patterns/arches.png)' }}>
             <Box sx={{ width: '80%', display: 'flex', flexDirection: 'column' }}>
                 <Box className="header-container" sx={{ width: '100%', marginBottom: '16px' }}>
                     <Typography variant="h5" style={{ textAlign: 'center', paddingBottom: '10px', paddingTop: '5px' }}>Activity Tracker</Typography>
@@ -167,19 +173,19 @@ const FormattedTable = () => {
                         </TableBody>
                     </Table>
                 </TableContainer>
-                <Button 
-                    variant="contained" 
-                    color="secondary" 
-                    onClick={handleReset} 
+                <Button
+                    variant="contained"
+                    color="secondary"
+                    onClick={handleReset}
                     sx={{ marginTop: 2, alignSelf: 'center', backgroundColor: '#D80032', color: '#EDF2F4' }}
                 >
-                    {confirmReset === 1 ? "Are you sure you want to reset?" : 
-                    confirmReset === 2 ? "Are you really sure you want to reset?" : 
-                    "Reset"}
+                    {confirmReset === 1 ? "Are you sure you want to reset?" :
+                        confirmReset === 2 ? "Are you really sure you want to reset?" :
+                            "Reset"}
                 </Button>
             </Box>
             <Box sx={{ width: '15%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Box className="info-box" sx={{ marginBottom: 1, width: '100%', height: '100px', right: '-30px', position: 'relative', top: '47px', backgroundColor: 'rgba(255, 237, 216, 0.8)' }}>
+                <Box className="info-box" sx={{ marginBottom: 1, width: '100%', height: '100px', right: '-30px', position: 'relative', top: '47px',backgroundColor:'white'}}>
                     <Typography variant="h6">Progress</Typography>
                     <Typography className="progress-percentage">{`${Math.round(progressPercentage)}%`}</Typography>
                 </Box>

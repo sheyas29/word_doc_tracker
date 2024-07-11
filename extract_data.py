@@ -1,6 +1,9 @@
 import docx
 import json
 import os
+import sys
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename
 
 def extract_data_from_docx(docx_path):
     doc = docx.Document(docx_path)
@@ -30,10 +33,28 @@ def extract_data_from_docx(docx_path):
     return data
 
 if __name__ == "__main__":
-    docx_path = input("Please provide the path to the Word document: ")
+    Tk().withdraw()  # Prevents the Tk window from showing up
+    docx_path = askopenfilename(title="Select the Word document", filetypes=[("Word Documents", "*.docx")])
+    
+    if not docx_path:
+        print("No file selected. Exiting.")
+        sys.exit()
+    
     activities = extract_data_from_docx(docx_path)
     
-    output_path = os.path.join('backend', 'activities.json')
+    # Get the root directory of the project
+    if getattr(sys, 'frozen', False):
+        # If the script is run as an executable, get the path to the executable
+        base_dir = os.path.dirname(sys.executable)
+    else:
+        # If the script is run from the source, get the path to the script
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Define the root directory assuming the backend folder is at the root of the project
+    root_dir = os.path.abspath(os.path.join(base_dir, '..', '..'))
+    
+    # Define the output path in the backend folder at the root of the project
+    output_path = os.path.join(root_dir, 'backend', 'activities.json')
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
     with open(output_path, 'w') as f:
